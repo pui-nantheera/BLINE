@@ -1,6 +1,13 @@
 # BLINE
 
 This source code package includes the MATLAB source codes for B-line detection. 
+
+Usage:
+
+To run GUI: Blinedetection.m
+To run as command line: runBlinedetection.m
+
+-----------------------------------------------------------------------
 Any usage please cite:
 
 N. Anantrasirichai, W. Hayes, M. Allinovi, D. Bull and A. Achim, "Line Detection as an Inverse Problem: Application to Lung Ultrasound Imaging," in IEEE Transactions on Medical Imaging, vol. 36, no. 10, pp. 2045-2056, Oct. 2017.
