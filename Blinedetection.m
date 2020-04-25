@@ -20,9 +20,11 @@ function varargout = Blinedetection(varargin)
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help Blinedetection
-
-% Last Modified by GUIDE v2.5 05-Nov-2016 23:05:09
+% -------------------------------------------------------------------------
+% Copyright (c) Nantheera Anantrasirichai and Alin Achim
+%
+% This code is distributed under the terms of the GNU General Public License 3.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -299,7 +301,7 @@ R = R/max(R(:));
 % estimate pdf
 set(handles.textStatus,'String','Estimating psf...');
 psfsize = 3;
-[~, psf] = estimatePSF(handles.imgnoise, [psfsize psfsize]);
+[~, psf] = estimatePSF(imgnoise(:,:,round(totalSlices/2)), [psfsize psfsize]);
 
 hw = handles.hLung(3);
 K  = psf2otf(psf,[hw,hw]);
