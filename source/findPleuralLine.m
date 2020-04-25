@@ -1,5 +1,11 @@
 function [pleuralLine, indi, indj, confidence] = findPleuralLine(imR, thetaHor, optionDim, maxplueral, ratio, mean_ind)
 
+%
+% Copyright (c) Nantheera Anantrasirichai and Alin Achim
+%
+% This code is distributed under the terms of the GNU General Public License 3.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % dimenstion
 [h w] = size(imR);
 

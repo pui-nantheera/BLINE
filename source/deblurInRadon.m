@@ -1,4 +1,9 @@
 function reconxAll = deblurInRadon(blurRfAll,thetaList,method, psfsize, normOption)
+%
+% Copyright (c) Nantheera Anantrasirichai and Alin Achim
+%
+% This code is distributed under the terms of the GNU General Public License 3.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 if nargin < 3
     mothod = 'matlab';

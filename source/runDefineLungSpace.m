@@ -1,4 +1,9 @@
 % runDefineLungSpace;
+%
+% Copyright (c) Nantheera Anantrasirichai and Alin Achim
+%
+% This code is distributed under the terms of the GNU General Public License 3.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 [indic, indjc] = find(sum(pleuralLine,3)>0.5);
 indic = ceil(mean(indic(:)))+5;

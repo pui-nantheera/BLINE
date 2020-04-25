@@ -1,5 +1,11 @@
 % function detectLines
 
+%
+% Copyright (c) Nantheera Anantrasirichai and Alin Achim
+%
+% This code is distributed under the terms of the GNU General Public License 3.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 R = finalR;
 if size(R,1)~=size(R,2)
     R = imresize(R, hLung(3)*[1 1]);

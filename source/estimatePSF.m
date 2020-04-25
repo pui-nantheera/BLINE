@@ -1,11 +1,16 @@
 function [H, PSF] = estimatePSF(RF, psf_size)
 % [H, PSF] = estimatePSF(RF, psf_size)
-% Estimate psf following the paper: O. V. Michailovich and A. Tannenbaum, ?Despeckling of medical
-% ultrasound images,? IEEE Transactions on Ultrasonics, Ferroelectrics,
+% Estimate psf following the paper: O. V. Michailovich and A. Tannenbaum, Despeckling of medical
+% ultrasound images, IEEE Transactions on Ultrasonics, Ferroelectrics,
 % and Frequency Control, vol. 53, no. 1, pp. 64?78, Jan 2006.
 %
 % RF is 2D radiofrequency image
 % psf_size is [height width] of psf
+%
+% Copyright (c) Nantheera Anantrasirichai and Alin Achim
+%
+% This code is distributed under the terms of the GNU General Public License 3.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 G = log(abs(fft2(RF)));
 deltaG = G - medfilt2(G);

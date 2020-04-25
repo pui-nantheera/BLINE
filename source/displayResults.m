@@ -2,6 +2,12 @@
 
 % display vertical lines and pleural line
 % -------------------------------------------------------------
+%
+% Copyright (c) Nantheera Anantrasirichai and Alin Achim
+%
+% This code is distributed under the terms of the GNU General Public License 3.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 if exist('lungRadonDisplay','var')
 radonmatP = zeros(size(lungRadonDisplay));
 radonmatP(round(Pposy*ratioResizeRadon(1)),round(Pposx*ratioResizeRadon(2))) = 1;
