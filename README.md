@@ -5,6 +5,7 @@ This source code package includes the MATLAB source codes for B-line detection.
 Usage:
 
 To run GUI: Blinedetection.m
+
 To run as command line: runBlinedetection.m
 
 -----------------------------------------------------------------------
