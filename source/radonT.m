@@ -1,5 +1,10 @@
-function Ax = radonT(x, theta)
+function Ax = radonT(x, theta, output_size)
 
-% inverse radon (line -> image)
-Ax = iradon(x,theta);%,'Hamming'); % filtering if want super smooth
+if nargin < 3
+    % inverse radon (line -> image)
+    Ax = iradon(x,theta);%,'Hamming'); % filtering if want super smooth
+    
+else
+    Ax = iradon(x,theta, output_size);
+end
 Ax = max(0,Ax(2:end-1,2:end-1));

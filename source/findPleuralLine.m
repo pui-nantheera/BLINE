@@ -1,7 +1,7 @@
-function [pleuralLine, indi, indj] = findPleuralLine(imR, thetaHor, optionDim, maxplueral, ratio)
+function [pleuralLine, indi, indj, confidence] = findPleuralLine(imR, thetaHor, optionDim, maxplueral, ratio, mean_ind)
 
 % dimenstion
-h = size(imR,1);
+[h w] = size(imR);
 
 % dim top part
 if optionDim==1
@@ -25,23 +25,45 @@ if optionDim==2
         numpix = sum(possiblearea(:));
         ratio = ratio - 0.1;
     end
-    minrho = find(sum(possiblearea,2)>0);
-    minrho = minrho(1);
-    dimmask = (size(qHor,1)-minrho:-1:1);
-    dimmask = [dimmask(1)*ones(1,minrho) dimmask]';
-    dimmask = repmat(dimmask, [1 size(qHor,2)]);
-    qHor = qHor.*dimmask;
+    if sum(possiblearea(:))>0
+        minrho = find(sum(possiblearea,2)>0);
+        minrho = minrho(1);
+        dimmask = (size(qHor,1)-minrho:-1:1);
+        dimmask = [dimmask(1)*ones(1,minrho) dimmask]';
+        dimmask = repmat(dimmask, [1 size(qHor,2)]);
+        qHor = qHor.*dimmask;
+    end
 end
 
 % find pleural line from the max of qHor
 BW = imregionalmax(qHor);
+%BW(1:min(size(qHor,1),round(1.5*size(qHor,2))),:) = 0;
+if mean_ind(1) > 0
+    limgap = 20;
+    BW([1:round(mean_ind(1))-limgap round(mean_ind(1))+limgap:end],:) = 0;
+    BW(:,[1:round(mean_ind(2))-limgap round(mean_ind(2))+limgap:end]) = 0;
+    while sum(BW(:))<=0
+        BW = imregionalmax(qHor);
+        BW(1:min(size(qHor,1),round(1.5*size(qHor,2))),:) = 0;
+        limgap = limgap*2;
+        BW([1:round(mean_ind(1))-limgap round(mean_ind(1))+limgap:end],:) = 0;
+        BW(:,[1:round(mean_ind(2))-limgap round(mean_ind(2))+limgap:end]) = 0;
+    end
+end
 [indi, indj] = find(BW);
 qHorMax = qHor(BW);
 [val, inds] = sort(qHorMax,'descend');
-inds = inds(1:maxplueral);
+inds = inds(1:min(length(inds),maxplueral));
 indi = indi(inds(1));
 indj = indj(inds(1));
 
 tempR = zeros(size(qHor));
 tempR(indi,indj) = max(qHor(:));
-pleuralLine = radonT(tempR, thetaHor);
+sidemax = max(size(imR));
+pleuralLine = radonT(tempR, thetaHor, sidemax);
+if size(pleuralLine,2) < w
+    pleuralLine = padarray(pleuralLine,[round((w-size(pleuralLine,2))/2) round((w-size(pleuralLine,2))/2)]);
+end
+pleuralLine = pleuralLine(round(sidemax/2 - h/2) + (1:h),:);
+
+confidence = val(1);%/sum(val(1:min(length(inds),maxplueral)));

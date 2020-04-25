@@ -68,12 +68,12 @@ for thetanum = 1:length(thetaList)
             end
             if strcmpi(method,'Shan') || sum(psf(:))==0
                 
-                imwrite(blurRfROI, 'temp/Rf_blur.png','png');
+                imwrite(blurRfROI, 'Rf_blur.png','png');
                 % using Shan's method
-                delete('temp/Rf_blur_kernel.png');
-                while ~exist('temp/Rf_blur_kernel.png','file')
+                delete('Rf_blur_kernel.png');
+                while ~exist('Rf_blur_kernel.png','file')
 %                     disp(['Running k=',num2str(k)]);
-                    command = ['deblur temp/Rf_blur.png temp/temp.png ',num2str(psfsize), ' ',num2str(psfsize), ' 0.1 0.2'];
+                    command = ['deblur.exe Rxf_blur.png tempx.png ',num2str(psfsize), ' ',num2str(psfsize), ' 0.1 0.2'];
                     dos(command);
                 end
                 psf = im2double(imread('temp/Rf_blur_kernel.png'));
