@@ -148,8 +148,9 @@ maxplueral = 5;
 [horig, w] = size(handles.imgnoise);
 h = min(horig,w);
 h = floor(h/2)*2;
-imR = handles.imgnoise(1:h,1:h);
-[pleuralLine, indi_p, indj_p] = findPleuralLine(imR, thetaHor, optionDim, maxplueral,ratio);
+boundplural = round(h/2);
+imR = handles.imgnoise(1:boundplural,:);
+[pleuralLine, indi_p, indj_p] = findPleuralLine(imR/max(imR(:)), thetaHor, optionDim, maxplueral,ratio);
 [indic, indjc] = find(pleuralLine>0);
 indic = ceil(mean(indic(:)))+5;
 pleuralLine = imdilate(pleuralLine,strel('disk',1));
@@ -298,8 +299,7 @@ R = R/max(R(:));
 % estimate pdf
 set(handles.textStatus,'String','Estimating psf...');
 psfsize = 3;
-initpsf = ones(psfsize,psfsize);
-[J,psf] = deconvblind(handles.imgnoise, initpsf);
+[~, psf] = estimatePSF(handles.imgnoise, [psfsize psfsize]);
 
 hw = handles.hLung(3);
 K  = psf2otf(psf,[hw,hw]);
