@@ -1,4 +1,10 @@
 function [indi, indj] = getLinePosition(Rf, rho, height, th, optionplot)%,theta)
+%
+% Copyright (c) Nantheera Anantrasirichai
+% N.Anantrasirichai@bristol.ac.uk
+%
+% This code is distributed under the terms of the GNU General Public License 3.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 if nargin < 4
     th = 40;

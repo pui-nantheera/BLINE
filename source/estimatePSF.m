@@ -7,7 +7,8 @@ function [H, PSF] = estimatePSF(RF, psf_size)
 % RF is 2D radiofrequency image
 % psf_size is [height width] of psf
 %
-% Copyright (c) Nantheera Anantrasirichai and Alin Achim
+% Copyright (c) Nantheera Anantrasirichai
+% N.Anantrasirichai@bristol.ac.uk
 %
 % This code is distributed under the terms of the GNU General Public License 3.0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

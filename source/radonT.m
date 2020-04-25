@@ -1,7 +1,8 @@
 function Ax = radonT(x, theta, output_size)
 
 %
-% Copyright (c) Nantheera Anantrasirichai and Alin Achim
+% Copyright (c) Nantheera Anantrasirichai
+% N.Anantrasirichai@bristol.ac.uk
 %
 % This code is distributed under the terms of the GNU General Public License 3.0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
