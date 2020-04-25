@@ -15,6 +15,9 @@ N. Anantrasirichai, W. Hayes, M. Allinovi, D. Bull and A. Achim, "Line Detection
 
 N. Anantrasirichai, M. Allinovi, W. Hayes and A. Achim, "Automatic B-line detection in paediatric lung ultrasound," 2016 IEEE International Ultrasonics Symposium (IUS), Tours, 2016, pp. 1-4.
 
+
+<a href="https://zenodo.org/badge/latestdoi/250038924"><img src="https://zenodo.org/badge/250038924.svg" alt="DOI"></a>
+
 -----------------------------------------------------------------------
 Copyright (c) Nantheera Anantrasirichai and Alin Achim
 N.Anantrasirichai@bristol.ac.uk
