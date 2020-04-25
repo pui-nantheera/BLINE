@@ -17,6 +17,7 @@ N. Anantrasirichai, M. Allinovi, W. Hayes and A. Achim, "Automatic B-line detect
 
 -----------------------------------------------------------------------
 Copyright (c) Nantheera Anantrasirichai and Alin Achim
+N.Anantrasirichai@bristol.ac.uk
 
 This code is distributed under the terms of the GNU General Public License 3.0 (GNU GPLv3)
 
