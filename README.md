@@ -8,6 +8,8 @@ To run GUI: Blinedetection.m
 
 To run as command line: runBlinedetection.m
 
+Note: This code works on the images from a linear probe. The curvelinear image has to be rectified first.
+
 -----------------------------------------------------------------------
 Any usage please cite:
 
