@@ -8,8 +8,8 @@ line detection and deconvolution simultaneously. An automatic B-line identificat
 using a simple local maxima technique in the Radon transform domain, associated with known clinical definitions
 of line artefacts.
 
-Figure below shows B-mode ultrasound image and detected lines (top row) and Radon transform domain representation of the restored B-mode images (bottom row). Red, yellow, blue and green lines represent the pleural lines, B-lines, A-lines and Z-lines, respectively
-![Image](https://seis.bristol.ac.uk/~eexna/research/BlineDetection/blines_results.png 400x400)
+Figure below shows B-mode ultrasound image and detected lines (top row) and Radon transform domain representation of the restored B-mode images (bottom row). Red, yellow, blue and green lines represent the pleural lines, B-lines, A-lines and Z-lines, respectively.
+<img src="https://seis.bristol.ac.uk/~eexna/research/BlineDetection/blines_results.png" width="500">
                     
 Example case: B-lines shown in lung ultrasound of COVID-19 patient.
 <video  loop autoplay muted  width="500">
