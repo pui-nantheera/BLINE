@@ -1,5 +1,11 @@
 # BLINE
 
+Example case: B-lines shown in lung ultrasound of COVID-19 patient.
+<video controls width="300">
+    <source src="BLINE_covid.mp4"
+            type="video/mp4">
+</video>
+
 This source code package includes the MATLAB source codes for B-line detection. 
 
 Usage:
