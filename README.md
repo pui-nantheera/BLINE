@@ -10,7 +10,7 @@ of line artefacts.
 
 Figure below shows B-mode ultrasound image and detected lines (top row) and Radon transform domain representation of the restored B-mode images (bottom row). Red, yellow, blue and green lines represent the pleural lines, B-lines, A-lines and Z-lines, respectively.
 
-<img src="blines.png" width="500">
+<img src="blines.png" width="700">
                     
 Example case: B-lines shown in lung ultrasound of COVID-19 patient.
 <video  loop autoplay muted  width="500">
