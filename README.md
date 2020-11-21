@@ -1,5 +1,6 @@
-This project aims to develop an objective tool <a href="https://www.youtube.com/watch?v=YzcvWdnT0sw">to determine fluid overload in children receiving dialysis</a>.
-B-lines, defined as discrete laser-like vertical hyperechoic reverberation artefacts in lung ultrasounds, have been shown to correlate with extravascular lung water in symptomatic and asymptomatic adults and children on dialysis. Recent studies have shown this technique to be useful in children on dialysis.
+<a href="https://www.youtube.com/watch?v=YzcvWdnT0sw">B-Line Quantification in Lung Ultrasound Images</a>
+
+This project aims to develop an objective tool to determine fluid overload in children receiving dialysis. B-lines, defined as discrete laser-like vertical hyperechoic reverberation artefacts in lung ultrasounds, have been shown to correlate with extravascular lung water in symptomatic and asymptomatic adults and children on dialysis. Recent studies have shown this technique to be useful in children on dialysis.
 
 We restored line restoration in speckle images by addressing this as a sparse estimation problem using both convex and
 non-convex optimisation techniques based on the Radon transform and sparsity regularisation. This breaks into
